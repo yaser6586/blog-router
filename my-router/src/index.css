@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:opsz@8..144&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* .wrapper {
+  max-width: 100%;
+}
+.postlist {
+  display: flex;
+}
+.left {
+  flex: 20%;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: black;
+}
+.middle {
+  flex: 80%;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: black;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+.posts {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  gap: 20px;
+}
+.right {
+  flex: 20%;
+  border-style: solid;
+  border-width: 0.5px;
+  border-color: black;
+} */
