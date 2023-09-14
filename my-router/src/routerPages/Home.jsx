@@ -9,7 +9,7 @@ function Home() {
   const postList = useLoaderData();
   const [posts, setPosts] = useState(postList);
   const [isLoading, setIsLoading] = useState(false);
-  const postPerPage = 4;
+  let postPerPage = 4;
   const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
     setIsLoading(true);
@@ -21,7 +21,8 @@ function Home() {
 
   const indexOfLastPost = currentPage * postPerPage;
   const indexOfFirstPost = indexOfLastPost - postPerPage;
-  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost + 1);
+  const currentPosts = posts.slice(indexOfFirstPost, indexOfLastPost);
+
   // paginate function to add click event when click to page number in pagination menu
   function paginate(pageNumber) {
     setCurrentPage(pageNumber);
@@ -43,6 +44,7 @@ function Home() {
               totalPosts={posts.length}
               postPerPage={postPerPage}
               paginate={paginate}
+              currentPage={currentPage}
             />
           </div>
         </div>
