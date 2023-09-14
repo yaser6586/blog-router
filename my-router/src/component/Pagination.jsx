@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 
 function Pagination({ totalPosts, postPerPage, paginate, currentPage }) {
   const pageNumbers = [];
-  for (let i = 1; i < Math.ceil(totalPosts / postPerPage); i++) {
+  for (let i = 1; i <= Math.ceil(totalPosts / postPerPage); i++) {
     pageNumbers.push(i);
   }
   return (

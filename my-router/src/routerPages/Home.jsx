@@ -37,7 +37,7 @@ function Home() {
         <div className="middle  basis-1/2 px-20 bg-gray-200 border-2  ">
           <div className="posts">
             {isLoading && <div>loading...</div>}
-            {posts && <Post key={posts} posts={currentPosts} />}
+            {posts.reverse() && <Post key={posts} posts={currentPosts} />}
           </div>
           <div>
             <Pagination
